@@ -1,0 +1,3 @@
+# Aprendizados da semana
+
+Nessa semana fomos introduzidos com uma **apresentação** sobre a Labenu, o que e como iremos aprender durante o curso e uma breve aprensentação entre os alunos. Aprendemos um pouco mais sobre computação, hardware, softwere, linguagem de **programação** e também sobre os programas que usaremos no decorrer do curso e um pouco mais sobre seus **códigos** como é o caso do terminal e o git. Alem de uma breve introdução durante a semana de cada setor do curso e como irão ajudar no nosso processo de **aprendizagem** e na trajetória **profissional**. Todo esse conteúdo foi passado já aplicando a **rotina** de estudo da Labenu.
