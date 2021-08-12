@@ -47,14 +47,14 @@ const funcaoParOuImpar = (numero) =>{
 funcaoParOuImpar (6)
 
 //d)
-// const funcaoFrase = (frase) => {
-//     const fraseMaiuscula = frase.toUpperCase()
-//     const tamanhoDaFrase = frase.length
-//     const fraseModificada = `${fraseMaiuscula} ${tamanhoDaFrase}`
-//     console.log (fraseModificada)
-// }
+const funcaoFrase = (frase) => {
+    const fraseMaiuscula = frase.toUpperCase()
+    const tamanhoDaFrase = frase.length
+    const fraseModificada = `${fraseMaiuscula} ${tamanhoDaFrase}`
+    console.log (fraseModificada)
+}
 
-// funcaoFrase(prompt("insira um frase"))
+funcaoFrase(prompt("insira um frase"))
 
 //Questão 3
 
@@ -86,7 +86,7 @@ const funcaoOperacoes = (numero1,numero2) =>{
     console.log("Diferença:",funcaoSubtracao(numeroInserido1,numeroInserido2))
 
     console.log("Multiplicação:",funcaomultiplicacao(numeroInserido1,numeroInserido2))
-    
+
     console.log("Divisão:",funcaoDivisao(numeroInserido1,numeroInserido2))
 
 }
