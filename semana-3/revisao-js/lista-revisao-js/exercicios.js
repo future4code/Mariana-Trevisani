@@ -16,11 +16,13 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-    let i = 0
-    while (array[i]> array[i++]){
+   
     let arrayOrdenado =[]
-    arrayOrdenado.push(array[i])
-    return arrayOrdenado
+    for(let i = 0; i<array.length; i++){
+        if (array[i]array[i+1]){
+        arrayOrdenado.push(array[i])
+    }
+    
     }
   return arrayOrdenado
 }
@@ -28,24 +30,36 @@ function retornaArrayOrdenado(array) {
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
     let arrayPar = []
-    for(let i = 0; i<array.length-1; i++){
+    for(let i = 0; i<array.length; i++){
         if (array[i]%2 === 0){
             
-            arrayPar = array[i] + arrayPar
-            return arrayPar
+            arrayPar.push(array[i])
+            
         }
-        return arrayPar
+        
     }
+  
  return arrayPar
 }
 
 // EXERCÍCIO 05
-function retornaNumerosParesElevadosADois(array) {
- 
+function retornaNumerosParesElevadosADois(array) { 
+    
+    let arrayParElevadoADois = []
+    for(let i = 0; i<array.length; i++){
+
+        if (array[i]%2 === 0){
+            arrayParElevadoADois.push(array[i]*array[i])            
+        }       
+    }
+  
+ return arrayParElevadoADois
+     
 }
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
+
   
 }
 
@@ -56,6 +70,17 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
+    let primeirosNumerosArrayPar = []
+    for(let i = 0; i<n; i++){
+        if (n[i]%2 === 0){
+            
+         primeirosNumerosArrayPar.push(n[i])
+            
+        }
+        
+    }
+ console.log (primeirosNumerosArrayPar)
+ return primeirosNumerosArrayPar
    
 }
 
@@ -71,7 +96,10 @@ function retornaSegundoMaiorESegundoMenor(array) {
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
+    
+        
+ return (`Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}.`)
+
 }
 
 // EXERCÍCIO 12
