@@ -1,0 +1,24 @@
+body {
+    background-image: linear-gradient(90deg, rgb(204, 234, 248) , rgb(217, 160, 250) );
+    background-size: cover;
+}
+a {
+    color: hsl(236, 68%, 56%);
+    margin: 5%;
+    padding-left: 10px;
+}
+.nome-loja {
+    color: rgb(112, 46, 34);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.logo-loja {
+    margin-left: 20px;
+    display: inline;
+    color: rgb(112, 46, 34);
+}
+
+
+.redes-sociais{
+    margin-top: 30%;
+}
