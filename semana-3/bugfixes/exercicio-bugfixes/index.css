@@ -44,6 +44,10 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    position:absolute;
+    top:60%;
+    bottom:0%;
+    right: 45%;
 }
 
 .botao-amarelo:hover {
@@ -53,6 +57,9 @@ div img {
 .container {
     height: 500px;
     text-align: center;
+    position:relative;
+    padding-top: 200px;
+    padding-bottom: 0px;
 }
 
 .icone {
