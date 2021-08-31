@@ -52,12 +52,49 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+    let numeroMaior = array[0]
+    for (let i= 0; i< array.length; i++){
+                
+        if (numeroMaior < array[i]){
+            
+            numeroMaior = array[i]     
+            
+        }
+        
+    }
+    return numeroMaior
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
 
+    let objeto = {
+        maiorNumero: 0,
+        maiorDivisivelPorMenor: 0,
+        diferenca: 0
+    }   
+
+    if (num1>num2){
+        
+    objeto.maiorNumero = num1
+    objeto.diferenca = num1 - num2
+        if (num1%num2 === 0){
+            objeto.maiorDivisivelPorMenor = true
+        }else {
+            objeto.maiorDivisivelPorMenor = false
+        }
+        
+    }else if (num2>num1){
+    
+    objeto.maiorNumero = num2
+    objeto.diferenca = num2 - num1
+        if (num2%num1 === 0){
+            objeto.maiorDivisivelPorMenor = true
+        }else {
+            objeto.maiorDivisivelPorMenor = false
+        }        
+    }    
+    return objeto
 }
 
 // EXERCÍCIO 08
