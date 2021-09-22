@@ -1,79 +1,39 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import styled from "styled-components";
-import { cadastro } from "./components/cadastro";
-import { listaDeUsuarios } from "./components/listaDeUsuarios";
+import React from "react"
+import TelaCadastro from "./components/TelaCadastro"
+import TelaUsuario from "./components/TelaUsuario"
 
-
-
-const StylePagina = styled.div`
-  margin: 30px auto;
-  display: flex;
-  justify-content: center;
-`;
-
-
-
-class App extends React.Component {
-  componentDidMount() {
-    this.props.atualizarUsuario();
+export default class App extends React.Component {
+  state = {
+    telaAtual:"cadastro"
   }
 
-  togglePage = () => {
-    this.props.updatePage();
-  };
+  escolhaTela = () => {
+    switch (this.state.telaAtual){
+      case "cadastro":
+        return <TelaCadastro irParaLista={this.irParaLista}/>
+      case "lista":
+        return <TelaUsuario irParaCadastro={this.irParaCadastro}/>
+      default: 
+        return <div>Erro! Página não encontrada =(</div>
+    }
+  }
 
-  render() {
-    const paginaAtual = this.props.paginaAtual;
-    const trocaNomePagina = paginaAtual === "cadastro" ? "usuários" : "cadastro";
-    const selecionarPaginaAtual =
-      paginaAtual === "cadastro" ? 
-      (
-        <cadastro onCreateUser={this.props.criarUsuario} />
-      ) : (
-        <listaDeUsuarios
-          onDeleteUser={this.props.excluirUsuario}
-          usuario={this.props.usuario}
-        />
-      );
+  irParaCadastro =() => {
+    this.setState({telaAtual: "cadastro"})
 
+
+  }
+
+  irParaLista = () => {
+    this.setState({telaAtual: "lista"})
+  }
+
+  render(){
     return (
-      <div className="App">
-        <button onClick={this.togglePage}>
-          Ir para  {trocaNomePagina}
-        </button>
-        <StylePagina>{selecionarPaginaAtual}</StylePagina>
+      <div>
+        {this.escolhaTela()}
       </div>
-    );
+    )
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    paginaAtual: state.paginaAtual,
-    Usuario: state.Usuario
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    updatePage: () => dispatch(togglePageAction()),
-    criarUsuario: (name, email) => dispatch(criarUsuario(name, email)),
-    excluirUsuario: user => dispatch(excluirUsuarioAcao(user)),
-    atualizarUsuario: () => dispatch(atualizarUsuario())
-  };
-}
-
-const AppStyle = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <Provider store={store}>
-    <AppStyle />
-  </Provider>,
-  rootElement
-);
-export default App;
+// export default App
