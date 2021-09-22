@@ -6,7 +6,7 @@ const headers = {
 };
 
 export const getAllUsers = () => {
-  return axios(`${baseURL}/ususario/getAllUsers`, { headers });
+  return axios(`${baseURL}/usuario/getAllUsers`, { headers });
 };
 
 export const requisicaoCriarUsuario = (name, email) => {

@@ -29,7 +29,7 @@ class App extends React.Component {
     const selecionarPaginaAtual =
       paginaAtual === "cadastro" ? 
       (
-        <Cadastro onCreateUser={this.props.criarUsuario} />
+        <cadastro onCreateUser={this.props.criarUsuario} />
       ) : (
         <listaDeUsuarios
           onDeleteUser={this.props.excluirUsuario}

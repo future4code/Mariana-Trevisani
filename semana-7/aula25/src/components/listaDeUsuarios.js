@@ -18,7 +18,7 @@ const BotaoDeExcluir = styled.span`
   cursor: pointer;
 `;
 
-export class UsersList extends React.Component {
+export class listaDeUsuarios extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
