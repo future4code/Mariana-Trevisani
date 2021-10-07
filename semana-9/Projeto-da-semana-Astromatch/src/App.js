@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { HomePage } from "./components/pages/homePage/homePage";
 import MatchesPage from "./components/pages/matchsPage/matchsPage";
 
@@ -14,7 +15,16 @@ const App = () => {
   };
 
   const cleanMatches = () => {
-    console.log("Esse botão vai limpar os matches");
+    axios
+      .put(
+        "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/mariana-stamatakis-maryam/clear"
+      )
+      .then((res) => {
+        "matches apagados";
+      })
+      .catch((err) => {
+        console.log(err.response);
+      });
   };
 
   return (
