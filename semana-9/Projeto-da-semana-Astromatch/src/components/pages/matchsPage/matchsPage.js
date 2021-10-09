@@ -25,20 +25,31 @@ const MatchesPage = () => {
 
   const reloadMatchesList = matchesList.map((match) => {
     return (
-      <div>
-        <img src={match.photo}></img>
-        <p>{match.name}</p>
-      </div>
+      <ProfileListItem key={match.id} name={match.name} photo={match.photo} />
     );
   });
 
+  const cleanMatches = () => {
+    axios
+      .put(
+        "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/mariana-stamatakis-maryam/clear"
+      )
+      .then((res) => {
+        console.log("matches apagados");
+        setMatchesList([]);
+      })
+      .catch((err) => {
+        console.log(err.response);
+      });
+  };
+
   return (
-    <MatchesContainer>
-      <MatchesList>
-        {reloadMatchesList}
-        {ProfileListItem}
-      </MatchesList>
-    </MatchesContainer>
+    <div>
+      <MatchesContainer>
+        <MatchesList>{reloadMatchesList}</MatchesList>
+      </MatchesContainer>
+      <button onClick={cleanMatches}>Limpar Matches</button>
+    </div>
   );
 };
 

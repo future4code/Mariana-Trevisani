@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const ListItemContainer = styled.div`
   display: flex;
-  border: 1px solid black;
+  margin-right: 33.333%;
   padding: 10px;
   margin: 10px;
-  justify-content: space-between;
   align-items: center;
 `;
 

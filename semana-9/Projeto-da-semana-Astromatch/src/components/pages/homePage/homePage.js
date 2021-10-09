@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { HomeContainer, Profile, ProfileImage } from "./styled";
+import { HomeContainer, Profile, ProfileImage, Div } from "./styled";
 
 export const HomePage = () => {
   const [profile, setProfile] = useState({});
@@ -22,13 +22,17 @@ export const HomePage = () => {
       });
   };
 
-  const choosePerson = () => {
+  const choosePerson = (choice) => {
     axios
       .post(
-        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/mariana-stamatakis-maryam/choose-person`
+        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/mariana-stamatakis-maryam/choose-person`,
+        {
+          id: profile.id,
+          choice
+        }
       )
       .then((res) => {
-        getProfile(res.data.choice);
+        getProfile();
       })
       .catch((err) => {
         console.log(err.response);
@@ -46,10 +50,12 @@ export const HomePage = () => {
             Olá sou {profile.name}, e tenho {profile.age} anos
           </h2>
           <p>{profile.bio}</p>
-          <div>
-            <button onClick={() => choosePerson(true)}>❌</button>
-            <button onClick={() => choosePerson(false)}>😍</button>
-          </div>
+          <Div>
+            <button onClick={() => choosePerson(false)}>❌</button>
+          </Div>
+          <Div>
+            <button onClick={() => choosePerson(true)}>😍</button>
+          </Div>
         </Profile>
       )}
     </HomeContainer>

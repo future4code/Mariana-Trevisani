@@ -1,7 +1,7 @@
 import React from "react";
 import { ListItemContainer, RoundImage } from "./styled";
 
-export const ProfileListItem = () => {
+export const ProfileListItem = (props) => {
   return (
     <ListItemContainer>
       <RoundImage src={props.photo} />

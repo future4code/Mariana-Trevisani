@@ -6,17 +6,26 @@ export const HomeContainer = styled.div`
   justify-content: center;
 `;
 
+export const Div = styled.div`
+  display: inline;
+  text-align: center;
+  float: left;
+`;
+
 export const Profile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 500px;
-  border: 1px solid black;
-  padding: 20px;
-  margin: 20px;
+  width: 450px;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 10px;
+  background-color: pink;
 `;
 
 export const ProfileImage = styled.img`
-  width: 400px;
+  width: 350px;
+  height: 350px;
 `;
