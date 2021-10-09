@@ -7,9 +7,12 @@ export const HomeContainer = styled.div`
 `;
 
 export const Div = styled.div`
-  display: inline;
+  display: flex;
   text-align: center;
-  float: left;
+`;
+
+export const P = styled.div`
+  width: 200px;
 `;
 
 export const Profile = styled.div`

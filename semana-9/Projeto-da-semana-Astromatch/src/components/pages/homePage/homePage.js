@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { HomeContainer, Profile, ProfileImage, Div } from "./styled";
+import { HomeContainer, Profile, ProfileImage, Div, P } from "./styled";
 
 export const HomePage = () => {
   const [profile, setProfile] = useState({});
@@ -52,8 +52,7 @@ export const HomePage = () => {
           <p>{profile.bio}</p>
           <Div>
             <button onClick={() => choosePerson(false)}>❌</button>
-          </Div>
-          <Div>
+            <P></P>
             <button onClick={() => choosePerson(true)}>😍</button>
           </Div>
         </Profile>
