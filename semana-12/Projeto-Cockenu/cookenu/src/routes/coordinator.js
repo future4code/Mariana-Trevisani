@@ -1,20 +1,20 @@
 export const goToLogin = (history) => { 
-    history.pushState("/login")
+    history.push("/login")
 }
 
 export const goToSignUp = (history) => { 
-    history.pushState("/cadastro")
+    history.push("/cadastro")
 }
 
 export const goToAddRecipes = (history) => { 
-    history.pushState("/adicionarReceitas")
+    history.push("/adicionarReceitas")
 }
 
 export const goToRecipesDetail = (history, id) => { 
-    history.pushState(`/detalhe/${id}`)
+    history.push(`/detalhe/${id}`)
 }
 
 export const goToRecipesList = (history) => { 
-    history.pushState("/")
+    history.push("/")
 }
 
