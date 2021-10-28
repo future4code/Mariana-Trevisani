@@ -4,9 +4,9 @@ export const ScreenContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-itens: center;
-    width: 100vw;
-    background-color: lightpink;
-    height:100vw ;
+    width: 100%;
+    background-color: #ffcdd2;
+    height:100% ;
     max-height: 680px
   
 `
@@ -34,6 +34,9 @@ export const SignUpButtonContainer = styled.div`
     width: 80vw;
     max-width: 450px;
     margin: 20px;
+    margin-bottom:12.3%;
+    margin-left: auto;
+    margin-right: auto;
 `
 
 export const LogoImage = styled.img`

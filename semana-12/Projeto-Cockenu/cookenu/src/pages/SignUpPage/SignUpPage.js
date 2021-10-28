@@ -1,10 +1,15 @@
 import React from "react"
+import {ScreenContainer, LogoImage} from "./Styled";
+import logo from "../../assets/Logo.png"
+import SignUpForm from "./SignUpForm.js";
+
 
 const SignUpPage = () => {
   return (
-    <div >
-     <h1> SignUpPage </h1>
-    </div>
+    <ScreenContainer >
+      <LogoImage src={logo}/>
+      <SignUpForm/>
+    </ScreenContainer>
   );
 }
 
