@@ -3,17 +3,17 @@ import {ImputsConteiner} from "./Styled";
 import TextField  from "@material-ui/core/TextField";
 import useForm from "../../hooks/useForm"
 import { Button } from "@material-ui/core";
-import login from "../../services/userRequest"
+import {login} from "../../services/userRequest"
 import { useHistory } from "react-router";
 
 
-const LoginForm = () => {
+const LoginForm = ({ setRightButtonText}) => {
   const[form,onChange,clear] = useForm({email:"", password:""})
   const history = useHistory()
 
   const onSubmitForm = (event) => {
     event.preventDefault()
-    login(form, clear, history)
+    login(form, clear, history, setRightButtonText)
   }
 
   
