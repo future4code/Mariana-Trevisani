@@ -1,9 +1,10 @@
 import React from "react"
-import {ImputsConteiner, SignUpFormContainer} from "./Styled";
+import {ImputsConteiner,} from "./Styled";
 import TextField  from "@material-ui/core/TextField";
 import useForm from "../../hooks/useForm"
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router";
+import signUp from "../../services/userRequest"
 
 
 const SignUpForm = () => {
@@ -12,6 +13,7 @@ const SignUpForm = () => {
 
     const onSubmitForm = (event) => {
         event.preventDefault()
+        signUp(form, clear, history)
     }
 
     return (
