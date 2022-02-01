@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ex3" : "node ./exercicio3.js"
+    "ex3" : "node ./exercicio3.js cozinhar"
   },
   "author": "Mariana Stamatakis Trevisani",
   "license": "ISC"

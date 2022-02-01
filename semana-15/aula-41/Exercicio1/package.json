@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ex1" : "node ./exercicio1.js"
+    "ex1" : "node ./exercicio1.js Mariana 5"
   },
   "author": "Mariana Stamatakis Trevisani",
   "license": "ISC"
